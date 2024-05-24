@@ -12,7 +12,7 @@ class VitalParameterController extends Controller
      */
     public function index()
     {
-        //
+        return view('vital_parameters.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class VitalParameterController extends Controller
      */
     public function create()
     {
-        //
+        return view('vital_parameters.create');
     }
 
     /**

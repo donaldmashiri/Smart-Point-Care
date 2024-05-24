@@ -12,7 +12,8 @@ class ReferralCaseController extends Controller
      */
     public function index()
     {
-        //
+        //referrals
+        return view('referrals.index');
     }
 
     /**
