@@ -3,13 +3,21 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">{{ __('Patient Register') }}</div>
-
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h5 class="fw-bolder">
+                            {{ __('Add Patients') }}
+                        </h5>
+                        <div class="justify-content-end">
+                            <a href="{{route('patients.index')}}" class="btn btn-secondary btn-sm justify-content-end"> Back</a>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        @include('layouts.messages')
+                        <form method="POST" action="{{ route('patients.store') }}">
                             @csrf
+                            <input type="hidden" value="patient" name="role">
 
                             <div class="row mb-3">
                                 <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
@@ -113,12 +121,14 @@
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
+                                        {{ __('Add') }}
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
+
+
                 </div>
             </div>
         </div>

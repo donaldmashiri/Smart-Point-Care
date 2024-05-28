@@ -22,7 +22,16 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'date_of_birth',
+        'gender',
+        'address',
+        'phone',
     ];
+
+    public function vitalParameters()
+    {
+        return $this->hasMany(VitalParameter::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
