@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Vital Parameters') }}</div>
 
                     <div class="card-body">
-                        <table class="table table-striped">
+                        <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
                                 <th>ID</th>

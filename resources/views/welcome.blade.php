@@ -52,7 +52,7 @@
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
                         <li class="nav-item"><a class="nav-link" href="/register">Specialist Register</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('patients.create')}}">Specialist Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route('patients.create')}}">Patient Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,8 +71,8 @@
                     Care Better Together</h1>
                 <p>Also you dry creeping beast multiply fourth abundantly our itsel signs bring our. Won form living. Whose dry you seasons divide given gathering great in whose you'll greater let livein form beast  sinthete
                     better together these place absolute right.</p>
-                <a href="" class="main_btn">Make an Appointment</a>
-                <a href="" class="main_btn_light">View Department</a>
+                <a href="{{route('patients.create')}}" class="main_btn">Patient Register</a>
+                <a href="/register" class="main_btn_light">Specialist Register</a>
             </div>
         </div>
     </div>
