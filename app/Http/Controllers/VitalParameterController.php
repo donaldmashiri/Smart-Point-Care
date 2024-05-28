@@ -14,7 +14,8 @@ class VitalParameterController extends Controller
      */
     public function index()
     {
-        return view('vital_parameters.index');
+        $vitalParameters = VitalParameter::all();
+        return view('vital_parameters.index', compact('vitalParameters'));
     }
 
     /**

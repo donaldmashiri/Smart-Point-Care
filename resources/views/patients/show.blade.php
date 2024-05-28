@@ -115,7 +115,7 @@
                                     <th>Specialist</th>
                                     <th>Diagnosis</th>
                                     <th>Advice</th>
-                                    <th>Created At</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -132,6 +132,47 @@
                             </table>
                         @else
                             <h4 class="alert alert-danger">No Diagonals yet</h4>
+                        @endif
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-10 mt-3">
+                <div class="card">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h5 class="fw-bolder">
+                            {{ __('Referrals') }}
+                        </h5>
+                        <div class="justify-content-end">
+                            <a href="{{route('referrals.create', ['user' => $patient->id])}}" class="btn btn-primary btn-sm justify-content-end">Add</a>
+                        </div>
+                    </div>
+                    <div class="card-body mt-3">
+                        @if($referrals->count() > 0)
+                            <table class="table table-sm table-bordered table-striped table-responsive-sm">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Specialist</th>
+                                    <th>Reason</th>
+                                    <th>Date</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($feedbacks as $feedback)
+                                    <tr>
+                                        <td>{{$feedback->id}}</td>
+                                        <td>{{$feedback->specialist}}</td>
+                                        <td>{{$feedback->reason}}</td>
+                                        <td>{{$feedback->created_at}}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <h4 class="alert alert-danger">No Referrals yet</h4>
                         @endif
                     </div>
 

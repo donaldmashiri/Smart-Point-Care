@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('referral_cases', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('referred_to');
+            $table->string('specialist');
             $table->text('reason');
             $table->timestamps();
         });

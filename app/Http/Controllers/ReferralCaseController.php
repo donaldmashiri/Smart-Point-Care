@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ReferralCase;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class ReferralCaseController extends Controller
 {
@@ -19,9 +21,11 @@ class ReferralCaseController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $patient = User::where('role', 'patient')->findOrFail($request->user);
+        $specialists = User::where('role', '!=', 'patient')->get();
+        return view('referrals.create', compact('patient', 'specialists'));
     }
 
     /**
@@ -29,7 +33,18 @@ class ReferralCaseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'user_id' => 'required',
+            'reason' => 'required',
+        ]);
+
+        $feedbacks = ReferralCase::create([
+            'user_id' => $request->user_id,
+            'specialist' => $request->specialist,
+            'reason' => $request->reason,
+        ]);
+
+        return back()->with('success', 'successfully referred to  '.$request->specialist);
     }
 
     /**

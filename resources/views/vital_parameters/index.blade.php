@@ -5,21 +5,25 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Vital Parameters') }}</div>
+                    <div class="card-header">
+                        <h5 class="fw-bolder">
+                            {{ __('Vital Parameters') }}
+                        </h5>
+                        </div>
 
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>User ID</th>
+                                <th>User</th>
                                 <th>Blood Pressure</th>
                                 <th>Heart Rate</th>
                                 <th>Body Temperature</th>
                                 <th>Oxygen Level</th>
                                 <th>Weight</th>
                                 <th>Notes</th>
-                                <th>Created At</th>
+                                <th>Date</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -27,7 +31,7 @@
                             @foreach($vitalParameters as $vitalParameter)
                             <tr>
                                 <td>{{$vitalParameter->id}}</td>
-                                <td>{{$vitalParameter->user()->name?? ""}}</td>
+                                <td>{{$vitalParameter->user->name}}</td>
                                 <td>{{$vitalParameter->blood_pressure}}</td>
                                 <td>{{$vitalParameter->heart_rate}}</td>
                                 <td>{{$vitalParameter->body_temperature}}</td>
