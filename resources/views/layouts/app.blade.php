@@ -54,6 +54,10 @@
                             @endif
                         @else
                             <li class="nav-item">
+                                <a class="nav-link text-white" href="{{ route('messaging.index') }}">{{ __('Messaging') }}</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('vital_parameters.index') }}">{{ __('Vital Parameters') }}</a>
                             </li>
 

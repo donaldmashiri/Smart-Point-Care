@@ -28,6 +28,11 @@ class User extends Authenticatable
         'phone',
     ];
 
+    public function messages()
+    {
+        return $this->hasMany(Messaging::class, 'user_id');
+    }
+
     public function vitalParameters()
     {
         return $this->hasMany(VitalParameter::class);

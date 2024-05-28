@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Messaging;
 use Illuminate\Http\Request;
+use Auth;
 
 class MessagingController extends Controller
 {
@@ -12,7 +13,8 @@ class MessagingController extends Controller
      */
     public function index()
     {
-        return view('messaging.index');
+        $messagings = Messaging::all();
+        return view('messaging.index', compact('messagings'));
     }
 
     /**
@@ -28,7 +30,33 @@ class MessagingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'message' => 'required|string',
+        ]);
+
+        $messaging = Messaging::create([
+            'user_id' => Auth::user()->id,
+            'role' => $request->input('role'),
+            'message' => $request->input('message'),
+        ]);
+
+        switch ($request->input('role')) {
+            case 'PHCPS':
+                $successMessage = 'Message sent to PHCPS.';
+                break;
+            case 'Specialist':
+                $successMessage = 'Message sent to Specialists.';
+                break;
+            case 'Referral Centers':
+                $successMessage = 'Message sent to Referral Centers.';
+                break;
+            default:
+                $successMessage = 'Message sent.';
+                break;
+        }
+
+        return back()->with('success', $successMessage);
     }
 
     /**

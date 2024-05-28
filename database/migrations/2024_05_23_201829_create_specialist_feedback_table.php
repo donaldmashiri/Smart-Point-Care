@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('specialist_feedback', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('specialist_id');
+            $table->string('specialist_name');
             $table->text('diagnosis');
             $table->text('advice')->nullable();
             $table->timestamps();

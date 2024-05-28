@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Patient;
+use App\Models\SpecialistFeedback;
 use App\Models\User;
 use App\Models\VitalParameter;
 use Illuminate\Http\Request;
@@ -68,9 +69,10 @@ class PatientController extends Controller
     {
         $patient = User::where('role', 'patient')->findOrFail($id);
         $vitalParameters = VitalParameter::where('user_id', $patient->id)->get();
+        $feedbacks = SpecialistFeedback::where('user_id', $patient->id)->get();
 
 
-         return view('patients.show', compact('patient', 'vitalParameters'));
+         return view('patients.show', compact('patient', 'vitalParameters', 'feedbacks'));
 
     }
 
