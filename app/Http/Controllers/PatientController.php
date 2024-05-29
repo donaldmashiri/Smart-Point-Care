@@ -58,7 +58,7 @@ class PatientController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return back()->with('success', 'Patient Added created successfully.');
+        return back()->with('success', 'Patient Account created successfully.');
 
 
     }

@@ -3,7 +3,8 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            @include('layouts.sidebar')
+            <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">{{ __('Sense, Store and Notify Application') }}</div>
 

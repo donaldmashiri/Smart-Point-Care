@@ -3,9 +3,10 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            @include('layouts.sidebar')
+            <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <div style="background-color: cornflowerblue" class="card-header text-white py-3 d-flex flex-row align-items-center justify-content-between">
                         <h5 class="fw-bolder">
                             {{ __('Patients') }}
                         </h5>
