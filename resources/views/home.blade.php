@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                  <h3>Welcome Munya</h3>
+                  <h3>Welcome to Smart Health</h3>
 
                         <table class="table table-bordered table-striped">
                             <tbody>

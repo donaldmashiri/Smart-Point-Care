@@ -32,6 +32,11 @@
                             <i class="bi bi-file-medical"></i> Medical Record
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('diagonises.index')}}">
+                            <i class="bi bi-clipboard-data"></i> Diagonises
+                        </a>
+                    </li>
                 @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('reports.index')}}">

@@ -28,3 +28,4 @@ Route::resource('feedbacks', \App\Http\Controllers\SpecialistFeedbackController:
 Route::resource('referrals', \App\Http\Controllers\ReferralCaseController::class);
 Route::resource('records', \App\Http\Controllers\RecordController::class);
 Route::resource('reports', \App\Http\Controllers\ReportController::class);
+Route::resource('diagonises', \App\Http\Controllers\DiagnosisController::class);

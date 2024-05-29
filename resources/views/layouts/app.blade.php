@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Smart-Point-Care') }}</title>
+    <title>{{ config('app.name', 'Smart Health') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-primary text-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand fw-bolder text-white" href="{{ url('/') }}">
-                    {{ config('app.name', 'Smart-Point-Care') }}
+                    {{ config('app.name', 'Smart-Health') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
