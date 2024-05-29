@@ -27,3 +27,4 @@ Route::resource('messaging', \App\Http\Controllers\MessagingController::class);
 Route::resource('feedbacks', \App\Http\Controllers\SpecialistFeedbackController::class);
 Route::resource('referrals', \App\Http\Controllers\ReferralCaseController::class);
 Route::resource('records', \App\Http\Controllers\RecordController::class);
+Route::resource('reports', \App\Http\Controllers\ReportController::class);

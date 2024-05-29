@@ -34,6 +34,11 @@
                     </li>
                 @endif
                 <li class="nav-item">
+                    <a class="nav-link" href="{{route('reports.index')}}">
+                        <i class="bi bi-bar-chart-line"></i> Reports
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-danger" href="/">
                         <i class="bi bi-lock"></i> Logout
                     </a>
