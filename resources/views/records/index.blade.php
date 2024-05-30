@@ -114,12 +114,12 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($feedbacks as $feedback)
+                                        @foreach($referrals as $referral)
                                             <tr>
-                                                <td>{{$feedback->id}}</td>
-                                                <td>{{$feedback->specialist}}</td>
-                                                <td>{{$feedback->reason}}</td>
-                                                <td>{{$feedback->created_at}}</td>
+                                                <td>{{$referral->id}}</td>
+                                                <td>{{$referral->specialist}}</td>
+                                                <td>{{$referral->reason}}</td>
+                                                <td>{{$referral->created_at}}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>

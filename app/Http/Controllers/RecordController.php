@@ -19,7 +19,7 @@ class RecordController extends Controller
         $patient = User::where('id', Auth::user()->id)->first();
         $vitalParameters = VitalParameter::where('user_id', $patient->id)->get();
         $feedbacks = SpecialistFeedback::where('user_id', $patient->id)->get();
-        $referrals = ReferralCase::where('user_id', $patient->id)->get();
+         $referrals = ReferralCase::where('user_id', $patient->id)->get();
 
         return view('records.index', compact('patient', 'vitalParameters', 'feedbacks', 'referrals'));
     }

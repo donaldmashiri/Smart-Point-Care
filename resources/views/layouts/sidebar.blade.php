@@ -18,7 +18,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('messaging.index')}}">
-                        <i class="bi bi-chat-dots"></i> Messaging
+                        <i class="bi bi-envelope-open"></i> Communication (PHCPS, Specialists & Referral Centers)
                     </a>
                 </li>
                 <li class="nav-item">
@@ -38,6 +38,12 @@
                         </a>
                     </li>
                 @endif
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('chats.index')}}">
+                        <i class="bi bi-chat-square-dots"></i> Chats
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('reports.index')}}">
                         <i class="bi bi-bar-chart-line"></i> Reports
