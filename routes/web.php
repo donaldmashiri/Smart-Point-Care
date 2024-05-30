@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function () {
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('patients', \App\Http\Controllers\PatientController::class);
@@ -30,3 +32,4 @@ Route::resource('records', \App\Http\Controllers\RecordController::class);
 Route::resource('reports', \App\Http\Controllers\ReportController::class);
 Route::resource('diagonises', \App\Http\Controllers\DiagnosisController::class);
 Route::resource('chats', \App\Http\Controllers\ChatController::class);
+});
