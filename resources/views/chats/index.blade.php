@@ -8,7 +8,7 @@
                 <div class="card">
                     <div style="background-color: cornflowerblue" class="card-header text-white py-3 d-flex flex-row align-items-center justify-content-between">
                         <h5 class="fw-bolder">
-                            @if(Auth::user()->role != 'specialist')
+                            @if(Auth::user()->role == 'patient')
                                 {{ __('Speak With Doctor') }}
                             @else
                                 {{ __('Speak With Patient') }}
